@@ -1,0 +1,302 @@
+:root {
+    --color-principal: #010208; 
+    --color-secundario: #ffc107; 
+    --color-gris-claro: #7ae69a;
+    --color-texto: #060897;
+    --color-fondo: #da84f0;
+}
+
+body {
+    background-image: url(WhatsApp\ Image\ 2025-12-22\ at\ 7.39.00\ PM.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.section-padding {
+    padding: 60px 0;
+}
+
+.bg-gris {
+    background-color: var(--color-gris-claro);
+}
+
+.intro-text {
+    
+    text-align: center;
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    color: #555;
+}
+
+/*--2. Encabezado y Navegación--*/
+header {
+    background: var(--color-principal);
+    color: #0aaab6;
+    padding: 15px 0;
+    border-bottom: 5px solid var(--color-secundario);
+}
+
+header h1 {
+    float: left;
+    margin: 0;
+    font-size: 1.8em;
+}
+
+header nav {
+    float: right;
+    margin-top: 5px;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 25px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--color-secundario);
+    border-bottom: 2px solid var(--color-secundario);
+}
+
+/* --- 3. Sección Héroe (Inicio) --- */
+.hero {
+        color: #fff;
+    text-align: center;
+    padding: 120px 0;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.65); 
+}
+
+.hero .container {
+    position: relative;
+    z-index: 10;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--color-secundario);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.hero p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--color-secundario);
+    color: var(--color-principal);
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #ffd54f;
+    transform: scale(1.05);
+}
+
+/* --- 4. Sección Soluciones 360° --- */
+.service-cycle {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.cycle-step {
+    flex: 1;
+    padding: 20px;
+    border-top: 4px solid var(--color-principal);
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.cycle-step h4 {
+    color: var(--color-principal);
+    font-size: 1.2em;
+}
+
+/* --- 5. Productos y Mantenimiento (Cards y Listas) --- */
+#productos h3, #mantenimiento h3, #soluciones h3, #contacto h3 {
+    text-align: center;
+    color: var(--color-principal);
+    margin-bottom: 40px;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.product-card {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-card h4 {
+    color: var(--color-principal);
+    margin-top: 0;
+}
+
+.maintenance-list {
+    list-style: none;
+    padding: 0;
+    max-width: 650px;
+    margin: 20px auto;
+}
+
+.maintenance-list li {
+    padding: 10px 0;
+    border-bottom: 1px dashed #ccc;
+    position: relative;
+    padding-left: 30px;
+}
+
+.maintenance-list li::before {
+    content: '🔧'; /* Icono de llave inglesa */
+    position: absolute;
+    left: 0;
+    color: var(--color-secundario);
+    font-size: 1.2em;
+}
+
+/* --- 6. Formulario de Contacto --- */
+#contacto form {
+    max-width: 550px;
+    margin: auto;
+    background: var(--color-fondo);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--color-principal);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+#contacto .cta-button {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* --- 7. Pie de Página --- */
+footer {
+    background: #222;
+    color: #ddd;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+
+/* --- 8. Responsividad --- */
+@media (max-width: 768px) {
+    header h1, header nav {
+        float: none;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 10px;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .hero {
+        padding: 80px 0;
+    }
+
+    .hero h2 {
+        font-size: 2.2em;
+    }
+
+    .service-cycle {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .product-grid {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
